@@ -6,17 +6,20 @@ import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 
 function HW4() {
     const [text, setText] = useState<string>("");
-    const error = text ? "" : "error";
+    const error = text ? "" : "Обязательно для заполнения!";
     const showAlert = () => {
         if (error) {
             alert("введите текст...");
         } else {
             alert(text); // если нет ошибки показать текст
+			setText(""); // очистить поле ввода
         }
     }
 
     const [checked, setChecked] = useState<boolean>(false);
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked);
+    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    	setChecked(e.currentTarget.checked);
+	}
 
     return (
         <div>
@@ -30,15 +33,16 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*should work (должно работать)*/}
                 <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
+                    red={false} // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    delete
+					{/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
                 {/*should work (должно работать)*/}
@@ -50,7 +54,10 @@ function HW4() {
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <SuperCheckbox
+					checked={checked}
+					onChange={testOnChange}
+				/>
             </div>
 
             <hr/>

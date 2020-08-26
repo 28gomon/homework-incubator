@@ -5,38 +5,45 @@ import s from "./SuperCheckbox.module.css";
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 type SuperCheckboxPropsType = DefaultInputPropsType & {
-    onChangeChecked?: (checked: boolean) => void
-    spanClassName?: string
+	onChangeChecked?: (checked: boolean) => void
+	spanClassName?: string
+	onChange?: (checked: ChangeEvent<HTMLInputElement>) => void
 };
 
 const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
-    {
-        type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
-        onChange, onChangeChecked,
-        className, spanClassName,
-        children, // в эту переменную попадёт текст, типизировать не нужно так как он затипизирован в React.FC
+	{
+		type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
+		onChange,
+		onChangeChecked,
+		className, spanClassName,
+		// в эту переменную попадёт текст, типизировать не нужно так как он затипизирован в React.FC
+		children,
 
-        ...restProps// все остальные пропсы попадут в объект restProps
-    }
+		...restProps// все остальные пропсы попадут в объект restProps
+	}
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // сделайте так чтоб работал onChange и onChangeChecked
-    }
+		// сделайте так чтоб работал onChange и onChangeChecked
+		if (onChangeChecked) onChangeChecked(e.currentTarget.checked);
+		if (onChange) onChange(e);
+	}
 
     const finalInputClassName = `${s.checkbox} ${className ? className : ""}`;
 
     return (
-        <label>
-            <input
-                type={"checkbox"}
-                onChange={onChangeCallback}
-                className={finalInputClassName}
+		<label className={s.label}>
+			<input
+				type={"checkbox"}
+				onChange={onChangeCallback}
+				className={finalInputClassName}
 
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
-            />
-            {children && <span className={s.spanClassName}>{children}</span>}
-        </label> // благодаря label нажатие на спан передастся в инпут
-    );
+				{...restProps}
+				// отдаём инпуту остальные пропсы если они есть (checked например там внутри)
+			/>
+			<span className={s.fake}/>
+			{children && <span className={s.spanClassName}>{children}</span>}
+		</label> // благодаря label нажатие на спан передастся в инпут
+	);
 }
 
 export default SuperCheckbox;
