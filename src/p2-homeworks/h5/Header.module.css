@@ -1,0 +1,132 @@
+/* Header */
+.Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #fcfcfc;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.10);
+    margin-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeaderButton {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: left .25s ease-in-out;
+    z-index: 100;
+}
+
+.HeaderButtonSpan {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background: #495566;
+}
+
+.HeaderButtonSpan::before, .HeaderButtonSpan::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #495566;
+    transition: all .25s ease-in-out;
+}
+
+.HeaderButtonSpan::before {
+    top: -6px;
+}
+
+.HeaderButtonSpan::after {
+    bottom: -6px;
+}
+
+.HeaderButtonOpen {
+    left: 345px;
+    transition: all .25s ease-in-out;
+    z-index: 1000;
+}
+
+.HeaderButtonOpen .HeaderButtonSpan {
+    background: transparent;
+}
+
+.HeaderButtonOpen .HeaderButtonSpan::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.HeaderButtonOpen .HeaderButtonSpan::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+/* Header */
+
+/* Nav */
+.Nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 320px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 1000;
+    box-shadow: 6px 0 6px rgba(0,0,0,0.20);
+    display: flex;
+    align-items: center;
+    transition: all .25s ease-in-out;
+}
+
+.Nav > .NavLinkWrapper {
+    width: 100%;
+}
+
+.Nav a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 40px;
+    color: #4da064;
+    font-weight: bold;
+    padding-left: 40px;
+    transition: all .25s ease-in-out;
+}
+
+.Nav a:hover {
+    background-color: #f3f3f3;
+}
+
+.OpenNav {
+    left: 0;
+}
+/* Nav */
+
+/* Active NavLink */
+.Active {
+    background-color: #eaeaea;
+}
+/* Active NavLink */
+
+.Backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.45);
+    z-index: 100;
+}
