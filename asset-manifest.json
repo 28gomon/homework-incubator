@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/28gomon/homework-incubator/static/css/main.c442c9bc.chunk.css",
-    "main.js": "/28gomon/homework-incubator/static/js/main.a8eb11b7.chunk.js",
-    "main.js.map": "/28gomon/homework-incubator/static/js/main.a8eb11b7.chunk.js.map",
-    "runtime-main.js": "/28gomon/homework-incubator/static/js/runtime-main.f2a83704.js",
-    "runtime-main.js.map": "/28gomon/homework-incubator/static/js/runtime-main.f2a83704.js.map",
-    "static/js/2.695df894.chunk.js": "/28gomon/homework-incubator/static/js/2.695df894.chunk.js",
-    "static/js/2.695df894.chunk.js.map": "/28gomon/homework-incubator/static/js/2.695df894.chunk.js.map",
-    "index.html": "/28gomon/homework-incubator/index.html",
-    "precache-manifest.c5e7d4b79bea46ce710d8d6828237b08.js": "/28gomon/homework-incubator/precache-manifest.c5e7d4b79bea46ce710d8d6828237b08.js",
-    "service-worker.js": "/28gomon/homework-incubator/service-worker.js",
-    "static/css/main.c442c9bc.chunk.css.map": "/28gomon/homework-incubator/static/css/main.c442c9bc.chunk.css.map",
-    "static/js/2.695df894.chunk.js.LICENSE.txt": "/28gomon/homework-incubator/static/js/2.695df894.chunk.js.LICENSE.txt"
+    "main.css": "/homework-incubator/static/css/main.c442c9bc.chunk.css",
+    "main.js": "/homework-incubator/static/js/main.05297b63.chunk.js",
+    "main.js.map": "/homework-incubator/static/js/main.05297b63.chunk.js.map",
+    "runtime-main.js": "/homework-incubator/static/js/runtime-main.913dac08.js",
+    "runtime-main.js.map": "/homework-incubator/static/js/runtime-main.913dac08.js.map",
+    "static/js/2.b60001ef.chunk.js": "/homework-incubator/static/js/2.b60001ef.chunk.js",
+    "static/js/2.b60001ef.chunk.js.map": "/homework-incubator/static/js/2.b60001ef.chunk.js.map",
+    "index.html": "/homework-incubator/index.html",
+    "precache-manifest.f8debdb1a77fbfc148097b3a12ba704f.js": "/homework-incubator/precache-manifest.f8debdb1a77fbfc148097b3a12ba704f.js",
+    "service-worker.js": "/homework-incubator/service-worker.js",
+    "static/css/main.c442c9bc.chunk.css.map": "/homework-incubator/static/css/main.c442c9bc.chunk.css.map",
+    "static/js/2.b60001ef.chunk.js.LICENSE.txt": "/homework-incubator/static/js/2.b60001ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f2a83704.js",
-    "static/js/2.695df894.chunk.js",
+    "static/js/runtime-main.913dac08.js",
+    "static/js/2.b60001ef.chunk.js",
     "static/css/main.c442c9bc.chunk.css",
-    "static/js/main.a8eb11b7.chunk.js"
+    "static/js/main.05297b63.chunk.js"
   ]
 }
