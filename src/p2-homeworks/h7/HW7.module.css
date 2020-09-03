@@ -1,0 +1,18 @@
+.HW7Wrapper {
+    position: relative;
+}
+
+.selectWrapper, .radioWrapper {
+    padding: 40px
+}
+
+.styleSelect {
+    width: 320px;
+    height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    border: 2px solid #eaeaea;
+    border-radius: 5px;
+    outline: none;
+}
